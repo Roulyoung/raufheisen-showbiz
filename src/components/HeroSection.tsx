@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-comedian.jpg";
+import heroImage from "@/assets/chris-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
@@ -16,8 +16,7 @@ export const HeroSection = () => {
           alt="Chris Raufheisen - Standup Comedian"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        <div className="absolute inset-0 bg-spotlight" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background" />
       </div>
 
       {/* Content */}
