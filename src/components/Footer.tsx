@@ -23,7 +23,7 @@ export const Footer = () => {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@ReallyGreatGuys"
               className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-gold hover:border-gold transition-colors duration-300"
               aria-label="YouTube"
             >

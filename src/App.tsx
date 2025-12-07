@@ -8,15 +8,17 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Use basename only in production (GitHub Pages)
-const basename = import.meta.env.PROD ? "/raufheisen-showbiz" : "";
+// Normalize Vite base (e.g., "/" locally, "/raufheisen-showbiz/" on GitHub Pages)
+const rawBase = import.meta.env.BASE_URL || "/";
+const normalizedBase = rawBase.replace(/\/+$/, "");
+const routerBase = normalizedBase === "" || normalizedBase === "/" ? undefined : normalizedBase;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={basename}>
+      <BrowserRouter basename={routerBase}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
