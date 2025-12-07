@@ -16,7 +16,7 @@ export const Footer = () => {
 
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="https://www.instagram.com/raufeisenx/"
               className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-gold hover:border-gold transition-colors duration-300"
               aria-label="Instagram"
             >
