@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Default to root for local/Lovable; override with VITE_BASE (e.g. "/raufheisen-showbiz/") for GitHub Pages
-  base: process.env.VITE_BASE ?? "/",
+  // Use repo subfolder in production so GitHub Pages serves assets correctly
+  base: mode === "development" ? "/" : process.env.VITE_BASE ?? "/raufheisen-showbiz/",
   server: {
     host: "::",
     port: 8080,
